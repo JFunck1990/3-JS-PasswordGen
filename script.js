@@ -1,23 +1,4 @@
 
-//GIVEN I need a new, secure password
-//WHEN I click the button to generate a password
-//THEN I am presented with a series of prompts for password criteria
-//WHEN prompted for password criteria
-//THEN I select which criteria to include in the password
-//WHEN prompted for the length of the password
-//THEN I choose a length of at least 8 characters and no more than 128 characters
-//WHEN prompted for character types to include in the password
-//THEN I choose lowercase, uppercase, numeric, and/or special characters
-//WHEN I answer each prompt
-//THEN my input should be validated and at least one character type should be selected
-//WHEN all prompts are answered
-//THEN a password is generated that matches the selected criteria
-//WHEN the password is generated
-//THEN the password is either displayed in an alert or written to the page
-
-//lengths
-  // var minLength = 8;
-  // var maxlength = 128;
 
 //checkboxes
   var specialCheck = document.getElementById("inlineCheckbox1")[0];
@@ -50,35 +31,35 @@
         if(passLength<8 || passLength>128)
         return;
 
-    //if no check boxes were checked prompt
+    //if no check boxes were checked  alert
     if (specialLet === false && numerals === false && lettersLower === false && lettersUpper === false) {
       alert("You have to select one of the check boxes!");
       return;
     }
-
+    // when checked special character input
     if(specialLet){
       temp = temp.concat(specialChar);
       finalChar.push(specialChar[Math.floor(Math.random() * specialChar.length)]);
       console.log("array: "+finalChar);
     }
-
+    //when checked number input
     if(numerals){
       temp = temp.concat(numbers);
       finalChar.push(numbers[Math.floor(Math.random() * numbers.length)]);
     }
-
+    // when checked uppercase letter input
     if(lettersUpper){
       temp = temp.concat(upperC);
       var index = Math.floor(Math.random() * upperC.length);
       finalChar.push(upperC[index]);
     }
-
+    // when checked lowercase input
     if(lettersLower){
       temp = temp.concat(lowerC);
       var index = Math.floor(Math.random() * lowerC.length);
       finalChar.push(lowerC[index]);
     }
-
+    // when prompted lenght, it will set the number
     for (var i = 0; i < parseInt(passLength); i++) {
      var index = Math.floor(Math.random() * temp.length);
      possibleChar.push(temp[index]);
