@@ -8,7 +8,7 @@ Unit - 03 JavaScript: Password Generator
 
 
 Welcome to my Password Generator! This site will generate letters, numbers , and special characters  from 8 to 128 characters.
-when you go in and check the desired characters  that I inputted (uppercase, lowercase, numbers, and special characters) you will be prompted to put in a number between 8 and 128 for desired length.
+when you go in and check the desired characters  that I inputted (uppercase, lowercase, numbers, and special characters) you will be prompted to put in a number between 8 and 128 for desired length. When your desired length is in, then you hit ok and your random password will be generated.
 
 
 //GIVEN I need a new, secure password
