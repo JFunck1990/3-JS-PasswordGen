@@ -28,7 +28,7 @@
     var passLength = prompt("choose a length of at least 8 characters and no more than 128 characters");
 
         //  aksing if password length is is more than or equal to 8 and is less than or equal 128
-        if(passLength<8 || passLength>128)
+        if(passLength< 8 || passLength> 128)
         return;
 
     //if no check boxes were checked  alert
